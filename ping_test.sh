@@ -7,7 +7,7 @@
 #----- help function -----
 function helper {
     echo "Usage:
-  ping_test [OPTION...]
+  ping_test [duration] [OPTION...]
 
 Application Options:
   -d                            Duration (in seconds)
@@ -43,20 +43,20 @@ done
 
 if [ "$aux_helper" "==" "" ]; then
     #If no log file is specified
-    if [ "$file" "==" "" ]; then    
+    if [ "$file" "==" "" ]; then
         file="ping_"$(date +%Y_%m_%d_%H_%M_%S).log
     fi
 
-    #If no host is specified 
+    #If no host is specified
     if [ "$host" "==" "" ]; then
         host=$"google.com"
     fi
 
-    #If no interval is specified 
+    #If no interval is specified
     if [ "$interval" "==" "" ] || [ "$interval" "<" "0.2" ]; then
         interval=$"1"
     fi
-    
+
     #if duration is specified
     if ! [ "$duration" "==" "" ] && ! [ -n "$(printf '%s\n' "$duration" | sed 's/[0-9]//g')" ]; then
         if [[ $verbose == "1" ]]; then
@@ -73,5 +73,5 @@ if [ "$aux_helper" "==" "" ]; then
     else
         echo "Invalid or missing arguments"
         helper
-    fi  
+    fi
 fi
