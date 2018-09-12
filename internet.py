@@ -16,7 +16,7 @@ def plotgraph():
     print("processing csv file...")
     #ingore first line (cvs header) and process the file
     for i in range(1, (len(lines))):
-        print (i)
+        #print (i)
         k_before = lines[i-1].split(",")
         k = lines[i].split(",")
         #print(k)
@@ -38,6 +38,7 @@ def plotgraph():
             #print ("invalid %i" %i)
             if float(k[1]) != float(k_before[1]):
                 start.append(datetime.strptime(k[0], '%Y-%m-%d %H:%M:%S:'))
+            print (i)
             if i != len(lines) and float(k_after[1]) != float(k[1]):
                 finish.append(datetime.strptime(k[0], '%Y-%m-%d %H:%M:%S:'))
 
