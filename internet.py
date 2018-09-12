@@ -15,17 +15,19 @@ def plotgraph():
 
     print("processing csv file...")
     #ingore first line (cvs header) and process the file
+    print ("lenght= " + str(len(lines)))
     for i in range(1, (len(lines))):
         #print (i)
         k_before = lines[i-1].split(",")
         k = lines[i].split(",")
-        #print(k)
+        print(k)
 
         #if current registry is not the last from file
         if(i != len(lines) - 1):
             k_after = lines[i+1].split(",")
         else:
             #to prevent a bug if last registry is a bad ping
+            #print("lasts")
             k_after = 1
 
         if float(k[1]) != 0:
@@ -39,14 +41,17 @@ def plotgraph():
             if float(k[1]) != float(k_before[1]):
                 start.append(datetime.strptime(k[0], '%Y-%m-%d %H:%M:%S:'))
             print (i)
-            if i != len(lines) and float(k_after[1]) != float(k[1]):
+            #print(k_before)
+            #print(k_after)
+            if i != (len(lines)-1) and float(k_after[1]) != float(k[1]):
                 finish.append(datetime.strptime(k[0], '%Y-%m-%d %H:%M:%S:'))
+    finish.append(datetime.strptime(k[0], '%Y-%m-%d %H:%M:%S:'))
 
 
     #set y (ping) scale
     plt.plot(dt,ping, drawstyle='steps')
     plt.title("Results")
-    plt.ylim([40,120])
+    plt.ylim([50,65])
     plt.xlabel("Datetime")
     plt.ylabel("Ping (ms)")
 
