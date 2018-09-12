@@ -1,0 +1,34 @@
+2018-09-12 10:56:16: PING google.com (172.217.30.110) 56(84) bytes of data.
+2018-09-12 10:56:16: 64 bytes from 172.217.30.110: icmp_seq=1 ttl=53 time=56.4 ms
+2018-09-12 10:56:17: 64 bytes from 172.217.30.110: icmp_seq=2 ttl=53 time=56.3 ms
+2018-09-12 10:56:18: 64 bytes from 172.217.30.110: icmp_seq=3 ttl=53 time=56.3 ms
+2018-09-12 10:56:19: 64 bytes from 172.217.30.110: icmp_seq=4 ttl=53 time=56.5 ms
+2018-09-12 10:56:20: 64 bytes from 172.217.30.110: icmp_seq=5 ttl=53 time=56.4 ms
+2018-09-12 10:56:21: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:22: 64 bytes from 172.217.30.110: icmp_seq=7 ttl=53 time=57.0 ms
+2018-09-12 10:56:23: 64 bytes from 172.217.30.110: icmp_seq=8 ttl=53 time=56.4 ms
+2018-09-12 10:56:24: 64 bytes from 172.217.30.110: icmp_seq=9 ttl=53 time=56.4 ms
+2018-09-12 10:56:25: 64 bytes from 172.217.30.110: icmp_seq=10 ttl=53 time=56.3 ms
+2018-09-12 10:56:26: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:27: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:28: 64 bytes from 172.217.30.110: icmp_seq=13 ttl=53 time=56.3 ms
+2018-09-12 10:56:29: 64 bytes from 172.217.30.110: icmp_seq=14 ttl=53 time=57.7 ms
+2018-09-12 10:56:30: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:31: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:32: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:33: 64 bytes from 172.217.30.110: icmp_seq=18 ttl=53 time=56.3 ms
+2018-09-12 10:56:34: 64 bytes from 172.217.30.110: icmp_seq=19 ttl=53 time=56.4 ms
+2018-09-12 10:56:35: 64 bytes from 172.217.30.110: icmp_seq=20 ttl=53 time=56.4 ms
+2018-09-12 10:56:36: 64 bytes from 172.217.30.110: icmp_seq=21 ttl=53 time=56.3 ms
+2018-09-12 10:56:37: 64 bytes from 172.217.30.110: icmp_seq=22 ttl=53 time=56.4 ms
+2018-09-12 10:56:38: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:39: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:40: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:41: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:42: 64 bytes from 172.217.30.110: icmp_seq=27 ttl=53 time=56.7 ms
+2018-09-12 10:56:43: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:44: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:45: ping: sendmsg: Network is unreachable
+2018-09-12 10:56:46: --- google.com ping statistics ---
+2018-09-12 10:56:46: 30 packets transmitted, 17 received, 43% packet loss, time 29254ms
+2018-09-12 10:56:46: rtt min/avg/max/mdev = 56.315/56.557/57.772/0.366 ms
