@@ -1,9 +1,0 @@
-2018-09-12 10:21:53: PING google.com (172.217.29.238) 56(84) bytes of data.
-2018-09-12 10:21:53: 64 bytes from 172.217.29.238: icmp_seq=1 ttl=53 time=56.3 ms
-2018-09-12 10:21:54: 64 bytes from 172.217.29.238: icmp_seq=2 ttl=53 time=57.5 ms
-2018-09-12 10:21:55: 64 bytes from 172.217.29.238: icmp_seq=3 ttl=53 time=58.1 ms
-2018-09-12 10:21:56: 64 bytes from 172.217.29.238: icmp_seq=4 ttl=53 time=57.0 ms
-2018-09-12 10:21:57: 64 bytes from 172.217.29.238: icmp_seq=5 ttl=53 time=56.4 ms
-2018-09-12 10:21:58: --- google.com ping statistics ---
-2018-09-12 10:21:58: 5 packets transmitted, 5 received, 0% packet loss, time 4005ms
-2018-09-12 10:21:58: rtt min/avg/max/mdev = 56.347/57.107/58.138/0.724 ms
