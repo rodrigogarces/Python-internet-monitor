@@ -5,17 +5,18 @@ from math import inf
 def plotgraph():
     print("---- generate graph ----")
     print("opening input file")
-    a = open("teste8.csv","r")
+    a = open("output.csv","r")
     lines = a.readlines()
     dt =[]
     ping = []
 
     start  = []
     finish = []
-    
+
     print("processing csv file...")
     #ingore first line (cvs header) and process the file
     for i in range(1, (len(lines))):
+        print (i)
         k_before = lines[i-1].split(",")
         k = lines[i].split(",")
         #print(k)
@@ -31,10 +32,10 @@ def plotgraph():
             #print (k[1])
             dt.append(datetime.strptime(k[0], '%Y-%m-%d %H:%M:%S:'))
             ping.append(float(k[1]))
-            print ("valid %i" %i)
-            print (k[1])
+            #print ("valid %i" %i + "    " + k[1].rstrip())
+            #print (k[1])
         else:
-            print ("invalid %i" %i)
+            #print ("invalid %i" %i)
             if float(k[1]) != float(k_before[1]):
                 start.append(datetime.strptime(k[0], '%Y-%m-%d %H:%M:%S:'))
             if i != len(lines) and float(k_after[1]) != float(k[1]):
@@ -56,11 +57,11 @@ def plotgraph():
     print("generating graph...")
     plt.show()
 
-def main():
+def generatecsv():
     print("---- generate csv file ----")
     #open input file
     print("opening input file")
-    a = open("input.log")
+    a = open("testeperda.log")
 
     #open output file
     print("opening output file")
@@ -94,9 +95,9 @@ def main():
             temp2 = k[-2].split("=")
             temp2 = temp2[1]
             b.write("%s:,%s\n" % (str(actual),temp2))
-        
+
         #if network is unreachable
-        elif(lines[i].find("Unreachable") != -1):
+        elif(lines[i].find("unreachable") != -1):
             string  = ("%s %s,%i\n" % (str(k[0]),str(k[1]),0))
             b.write(string)
 
@@ -108,14 +109,14 @@ def main():
 
             string  = ("%s %s,%s\n" % (str(k[0]),str(k[1]),temp2))
             b.write(string)
-            
+
         actual = prox
     print("file sucessfully processed")
-       
-    print("closing input file") 
+
+    print("closing input file")
     a.close()
     print("closing output file")
     b.close()
 
-#main()
+#generatecsv()#ok!
 plotgraph()
