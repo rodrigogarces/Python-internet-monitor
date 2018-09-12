@@ -15,12 +15,12 @@ def plotgraph():
 
     print("processing csv file...")
     #ingore first line (cvs header) and process the file
-    print ("lenght= " + str(len(lines)))
+    #print ("lenght= " + str(len(lines)))
     for i in range(1, (len(lines))):
         #print (i)
         k_before = lines[i-1].split(",")
         k = lines[i].split(",")
-        print(k)
+        #print(k)
 
         #if current registry is not the last from file
         if(i != len(lines) - 1):
@@ -40,7 +40,7 @@ def plotgraph():
             #print ("invalid %i" %i)
             if float(k[1]) != float(k_before[1]):
                 start.append(datetime.strptime(k[0], '%Y-%m-%d %H:%M:%S:'))
-            print (i)
+            #print (i)
             #print(k_before)
             #print(k_after)
             if i != (len(lines)-1) and float(k_after[1]) != float(k[1]):
